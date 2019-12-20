@@ -1,3 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import PostModel
+def index(request):
+      allpost = PostModel.objects.all()
+      d={
+          'posts': all post
+      }
+    
+    return render(request, 'photo_app/index.html')
